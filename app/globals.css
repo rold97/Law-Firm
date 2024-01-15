@@ -2,26 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  * {
+    @apply box-border font-montserrat;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  body {
+    @apply bg-gradient-to-br from-lightGray to-gray;
+  }
+  a {
+    @apply text-lightGray transition-all duration-300 cursor-pointer;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply md:text-[62px] text-[36px] md:leading-[84px] leading-[56px];
+  }
+  h2 {
+    @apply text-[62px] leading-[68px];
+  }
+  h3 {
+    @apply text-[20px] leading-[30px];
+  }
+  p {
+    @apply leading-8;
+  }
+  a {
+    @apply text-lightGray font-semibold hover:underline hover:text-darkGray;
+  }
+  .active {
+    @apply underline text-darkGray;
+  }
 }
