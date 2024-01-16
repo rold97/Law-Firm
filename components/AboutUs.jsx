@@ -8,7 +8,10 @@ import { fadeIn } from "@/variants";
 
 const AboutUs = () => {
   return (
-    <section className="h-[720px] flex items-center" id="aboutUs">
+    <section
+      className="h-[720px] flex items-center bg-gradient-to-br from-lightGray to-gray"
+      id="aboutUs"
+    >
       <div className="container md:grid md:grid-cols-3 items-center justify-between">
         <motion.div
           variants={fadeIn("right", 0.2)}

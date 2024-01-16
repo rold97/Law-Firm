@@ -14,7 +14,7 @@ import { Button } from "./ui/button";
 const links = [
   { icon: <RiHome5Fill />, path: "home", name: "home", offset: 0 },
   { icon: <FaUsers />, path: "about", name: "about", offset: -50 },
-  { icon: <FaEnvelope />, path: "location", name: "location", offset: 0 },
+  { icon: <FaEnvelope />, path: "practices", name: "practices", offset: 0 },
 ];
 
 const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
