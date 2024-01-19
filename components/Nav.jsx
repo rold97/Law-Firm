@@ -3,23 +3,29 @@ import { Link } from "react-scroll";
 const links = [
   {
     path: "home",
-    name: "home",
+    name: "Головна",
     offset: -50,
   },
   {
     path: "aboutUs",
-    name: "about us",
+    name: "Про нас",
     offset: -50,
   },
   {
     path: "practices",
-    name: "practices",
+    name: "Практики",
     offset: -150,
   },
+
   {
-    path: "location",
-    name: "location",
+    path: "whyUs",
+    name: "Чому ми",
     offset: 0,
+  },
+  {
+    path: "contacts",
+    name: "Контакти",
+    offset:  0,
   },
 ];
 

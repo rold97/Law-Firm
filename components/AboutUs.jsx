@@ -9,10 +9,10 @@ import { fadeIn } from "@/variants";
 const AboutUs = () => {
   return (
     <section
-      className="h-[720px] flex items-center bg-gradient-to-br from-lightGray to-gray"
+      className="py-32 flex items-center bg-gradient-to-br from-lightGray to-gray"
       id="aboutUs"
     >
-      <div className="container md:grid md:grid-cols-3 items-center justify-between">
+      <div className="container mx-auto md:grid md:grid-cols-3 items-center justify-between">
         <motion.div
           variants={fadeIn("right", 0.2)}
           initial="hidden"
@@ -33,9 +33,10 @@ const AboutUs = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.4 }}
+            className="md:text-[62px] md:leading-[62px] leading-[52px] text-[42px]"
           >
             Досвідчені юристи,
-            <span className="text-darkGreen">індивідуальний</span> підхід і
+            <span className="text-darkGreen"> індивідуальний</span> підхід і
             висока якість сервісу
           </motion.h2>
           <motion.p

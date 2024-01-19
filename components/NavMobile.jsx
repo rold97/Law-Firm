@@ -1,20 +1,29 @@
 "use client";
 
 import { useState } from "react";
-import { RiMenu2Line, RiHome5Fill } from "react-icons/ri";
-import { IoClose, IoCloseOutline } from "react-icons/io5";
-import { BiSolidFoodMenu } from "react-icons/bi";
-import { FaUsers, FaEnvelope } from "react-icons/fa";
+import { RiMenu2Line, RiHome5Fill, RiPhoneFill } from "react-icons/ri";
 
+import { IoClose, IoCloseOutline } from "react-icons/io5";
+
+import { FaUsers } from "react-icons/fa";
+import { GoLaw } from "react-icons/go";
+import { BiLike } from "react-icons/bi";
 import { Link as ScrollLink } from "react-scroll";
-import Image from "next/image";
+
 import Link from "next/link";
 import { Button } from "./ui/button";
 
 const links = [
-  { icon: <RiHome5Fill />, path: "home", name: "home", offset: 0 },
-  { icon: <FaUsers />, path: "about", name: "about", offset: -50 },
-  { icon: <FaEnvelope />, path: "practices", name: "practices", offset: 0 },
+  { icon: <RiHome5Fill />, path: "home", name: "Головна", offset: 0 },
+  { icon: <FaUsers />, path: "aboutUs", name: "Про нас", offset: -50 },
+  { icon: <GoLaw />, path: "practices", name: "практики", offset: 0 },
+  { icon: <BiLike />, path: "whyUs", name: "Чому ми", offset: 0 },
+  {
+    icon: <RiPhoneFill />,
+    path: "contacts",
+    name: "Контакти",
+    offset: 0,
+  },
 ];
 
 const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
@@ -58,6 +67,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
             {links.map((link, i) => {
               return (
                 <ScrollLink
+                  onClick={() => setIsOpen(false)}
                   key={i}
                   to={link.path}
                   offset={link.offset}
@@ -71,8 +81,19 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
             })}
           </div>
           {/* btn */}
-          <ScrollLink to="reservation" smooth offset={-150}>
-            <Button variant="orange">Book a table!</Button>
+          <ScrollLink
+            to="reservation"
+            smooth
+            offset={-150}
+            onClick={() => setIsOpen(false)}
+          >
+            <Button
+              variant="destructive"
+              size="default"
+              className="uppercase text-black/80 text-[12px]"
+            >
+              Записатись на консультацію
+            </Button>
           </ScrollLink>
         </div>
       </aside>

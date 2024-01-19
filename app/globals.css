@@ -10,7 +10,7 @@
     @apply bg-gradient-to-br from-lightGray to-gray;
   }
   a {
-    @apply text-lightGray transition-all duration-300 cursor-pointer;
+    @apply text-lightGray transition-all duration-300 cursor-pointer no-underline hover:no-underline;
   }
   h1,
   h2,
