@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -53,13 +54,15 @@ const Hero = () => {
               >
                 Замовити консультацію юриста
               </Button>
-              <Button
-                variant="destructive"
-                size="default"
-                className="uppercase mt-8 xl:mt-0"
-              >
-                Ознайомитись з нашими послугами
-              </Button>
+              <Link to="practices" spy={true} smooth={true}>
+                <Button
+                  variant="destructive"
+                  size="default"
+                  className="uppercase mt-8 xl:mt-0"
+                >
+                  Ознайомитись з нашими послугами
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </div>

@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+
+import { motion } from "framer-motion";
+import { fadeIn } from "@/variants";
 
 const WhyUs = () => {
   const ourAdvanteges = [
@@ -25,19 +28,32 @@ const WhyUs = () => {
       id="whyUs"
     >
       <div className="mx-auto container">
-        <h2 className="md:text-[54px] text-[30px] text-center pb-7">
+        <motion.h2
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.2 }}
+          className="md:text-[54px] text-[30px] text-center pb-7"
+        >
           Чому клієнти обирають нас?
-        </h2>
+        </motion.h2>
         {ourAdvanteges.map((item, i) => {
           return (
-            <div key={i} className="border-b border-black/70 flex py-14">
+            <motion.div
+              variants={fadeIn("right", 0.4)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+              key={i}
+              className="border-b border-black/70 flex py-14"
+            >
               <h3 className="w-[40%] xl:text-[38px] flex items-center text-[16px]">
                 {item.title}
               </h3>
               <p className="w-[60%] text-[12px] md:text-[20px] text-black/70 text-justify">
                 {item.description}
               </p>
-            </div>
+            </motion.div>
           );
         })}
       </div>

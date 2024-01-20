@@ -48,7 +48,8 @@ const Practices = () => {
 
   return (
     <section
-      className="bg-gradient-to-br from-darkGreen to-Green py-32"
+      // className="bg-gradient-to-br from-darkGreen to-Green py-32"
+      className="bg-darkGreen py-32"
       id="practices"
     >
       <div className="container mx-auto">
