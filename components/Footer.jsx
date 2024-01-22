@@ -15,7 +15,7 @@ const Footer = () => {
           variants={fadeIn("down", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="flex flex-col gap-8 justify-center items-center"
         >
           {/* logo */}
@@ -36,7 +36,7 @@ const Footer = () => {
           variants={fadeIn("down", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="hidden xl:flex items-center justify-center"
         >
           <Button
@@ -52,7 +52,7 @@ const Footer = () => {
           variants={fadeIn("down", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="flex flex-col justify-center items-center gap-8"
         >
           <div className="flex items-center justify-center gap-2">

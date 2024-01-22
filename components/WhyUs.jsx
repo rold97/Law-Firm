@@ -32,7 +32,7 @@ const WhyUs = () => {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="md:text-[54px] text-[30px] text-center pb-7"
         >
           Чому клієнти обирають нас?
@@ -43,7 +43,7 @@ const WhyUs = () => {
               variants={fadeIn("right", 0.4)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               key={i}
               className="border-b border-black/70 flex py-14"
             >

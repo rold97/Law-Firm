@@ -7,7 +7,7 @@
     @apply box-border font-montserrat;
   }
   body {
-    @apply bg-gradient-to-br from-lightGray to-gray;
+    @apply bg-gradient-to-br from-lightGray to-gray bg-cover bg-no-repeat;
   }
   a {
     @apply text-lightGray transition-all duration-300 cursor-pointer no-underline hover:no-underline;

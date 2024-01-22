@@ -17,7 +17,7 @@ const AboutUs = () => {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           className="hidden bg-darkGreen w-60 h-40 rounded-md md:grid grid-cols-3 grid-rows-2 shadow-xl"
         >
           <p className="flex col-span-2 text-xl font-semibold items-center justify-center">
@@ -32,7 +32,7 @@ const AboutUs = () => {
             variants={fadeIn("left", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             className="md:text-[62px] md:leading-[62px] leading-[52px] text-[42px]"
           >
             Досвідчені юристи,
@@ -43,7 +43,7 @@ const AboutUs = () => {
             variants={fadeIn("left", 0.4)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             className="pt-8 "
           >
             Ми прагнемо надавати нашим клієнтам якісні та професійні послуги, а
@@ -57,7 +57,7 @@ const AboutUs = () => {
             variants={fadeIn("left", 0.6)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             className="pt-8"
           >
             <Button variant="secondary" size="default" className="uppercase">

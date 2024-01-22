@@ -36,6 +36,7 @@ module.exports = {
       },
       backgroundImage: {
         bgHero: "url('/hero/bg.jpg')",
+        bgImage: "url('/practice/img.jpg')",
       },
       keyframes: {
         "accordion-down": {

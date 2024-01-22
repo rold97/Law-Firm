@@ -20,7 +20,7 @@ const Hero = () => {
               variants={fadeIn("right", 0.2)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: false, amount: 0.4 }}
+              viewport={{ once: true, amount: 0.4 }}
               className=" text-lightGray "
             >
               Змініть сприйняття юриспруденції разом із{" "}
@@ -32,7 +32,7 @@ const Hero = () => {
               variants={fadeIn("right", 0.4)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: false, amount: 0.4 }}
+              viewport={{ once: true, amount: 0.4 }}
               className="text-lightGray py-6 text-[18px]"
             >
               Vorobets & Pylypiuk — системна юридична фірма, яка супроводжує Вас
@@ -44,7 +44,7 @@ const Hero = () => {
               variants={fadeIn("right", 0.6)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: false, amount: 0.4 }}
+              viewport={{ once: true, amount: 0.4 }}
               className="flex-col xl:flex-row items-center justify-center gap-[50px]"
             >
               <Button
@@ -71,7 +71,7 @@ const Hero = () => {
           variants={fadeIn("left", 0.8)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           className="hidden xl:flex items-end justify-start "
         >
           <div className=" flex gap-5 z-20 text-[18px] items-center justify-between">
@@ -86,7 +86,7 @@ const Hero = () => {
         variants={fadeIn("left", 0.6)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 0.4 }}
+        viewport={{ once: true, amount: 0.4 }}
         className="w-[60%] h-[10rem] absolute -bottom-12 right-0 bg-darkGreen rounded-md z-20 hidden xl:block shadow-md"
       />
     </section>
