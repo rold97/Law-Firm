@@ -1,33 +1,11 @@
 "use client";
-
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import Nav from "./Nav";
 import NavMobile from "./NavMobile";
 
 const Header = () => {
-  const [active, setActive] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // detect scroll
-      setActive(window.scrollY > 100);
-    };
-
-    // add event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // clear event listener
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
-    <header
-      className={`${
-        active ? "bg-black/70 shadow-xl" : "bg-black/60"
-      } "  py-2 z-50 fixed top-0 w-full left-0 right-0 transition-all duration-200 "`}
-    >
+    <header className="bg-black/60 shadow-xl py-2 z-50 fixed top-0 w-full left-0 right-0 transition-all duration-200 ">
       <div className="container mx-auto flex gap-[40px] justify-between items-center">
         <Link href="/" className="hover:no-underline">
           <div className="w-[200px]">

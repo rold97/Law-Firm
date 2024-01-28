@@ -5,13 +5,18 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
+import { useModalStore } from "@/store";
+import Modal from "./ui/Modal";
 
 const AboutUs = () => {
+  const modal = useModalStore((state) => state.modalIsOpen);
+  const setModalIsOpen = useModalStore((state) => state.setModalIsOpen);
   return (
     <section
       className="py-32 flex items-center bg-gradient-to-br from-lightGray to-gray"
       id="aboutUs"
     >
+      {modal ? <Modal /> : ""}
       <div className="container mx-auto md:grid md:grid-cols-3 items-center justify-between">
         <motion.div
           variants={fadeIn("right", 0.2)}
@@ -60,7 +65,12 @@ const AboutUs = () => {
             viewport={{ once: true, amount: 0.4 }}
             className="pt-8"
           >
-            <Button variant="secondary" size="default" className="uppercase">
+            <Button
+              variant="secondary"
+              size="default"
+              className="uppercase"
+              onClick={setModalIsOpen}
+            >
               <HiOutlinePencilSquare size={28} className="mr-4" />
               Записатись на консультацію
             </Button>

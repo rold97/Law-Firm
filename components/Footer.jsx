@@ -5,10 +5,15 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
+import Modal from "./ui/Modal";
+import { useModalStore } from "@/store";
 
 const Footer = () => {
+  const modal = useModalStore((state) => state.modalIsOpen);
+  const setModalIsOpen = useModalStore((state) => state.setModalIsOpen);
   return (
     <footer className=" bg-darkGreen py-20" id="contacts">
+      {modal ? <Modal /> : ""}
       <div className="grid flex-col md:grid-cols-2 xl:grid-cols-3 mx-auto container items-center gap-10">
         {/* col 1 */}
         <motion.div
@@ -43,6 +48,7 @@ const Footer = () => {
             variant="destructive"
             size="default"
             className="uppercase text-black/80"
+            onClick={setModalIsOpen}
           >
             Записатись на консультацію
           </Button>

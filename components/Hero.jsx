@@ -1,23 +1,23 @@
 "use client";
-
 import { Button } from "./ui/button";
 // import { FaArrowDown } from "react-icons/fa6";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
 import { Link } from "react-scroll";
-import { useState } from "react";
 import Modal from "./ui/Modal";
+import { useModalStore } from "@/store";
 
 const Hero = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const modal = useModalStore((state) => state.modalIsOpen);
+  const setModalIsOpen = useModalStore((state) => state.setModalIsOpen);
 
   return (
     <section
       className="bg-bgHero  bg-no-repeat relative xl:bg-cover h-[95vh] xl:py-0 "
       id="home"
     >
-      {modalOpen ? <Modal /> : ""}
+      {modal ? <Modal /> : ""}
       <div className="container mx-auto h-full relative">
         <div className="flex items-center h-[90%]">
           <div className="xl:w-[80%] w-full text-center xl:text-left">
@@ -53,7 +53,7 @@ const Hero = () => {
               className="flex-col xl:flex-row items-center justify-center gap-[50px]"
             >
               <Button
-                onClick={() => setModalOpen(true)}
+                onClick={setModalIsOpen}
                 variant="default"
                 size="default"
                 className="uppercase mr-0 md:mr-8"
