@@ -5,7 +5,7 @@ import NavMobile from "./NavMobile";
 
 const Header = () => {
   return (
-    <header className="bg-black/60 shadow-xl py-2 z-50 fixed top-0 w-full left-0 right-0 transition-all duration-200 ">
+    <header className="bg-black/60 shadow-xl py-2 z-50 fixed top-0 w-full left-0 transition-all duration-200 ">
       <div className="container mx-auto flex gap-[40px] justify-between items-center">
         <Link href="/" className="hover:no-underline">
           <div className="w-[200px]">

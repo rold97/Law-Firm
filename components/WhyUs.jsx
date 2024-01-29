@@ -24,7 +24,7 @@ const WhyUs = () => {
 
   return (
     <section
-      className="py-24 bg-gradient-to-br relative from-lightGray to-gray"
+      className="sm:py-24 py-12 bg-gradient-to-br relative from-lightGray to-gray"
       id="whyUs"
     >
       <div className="mx-auto container">
@@ -33,7 +33,7 @@ const WhyUs = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.2 }}
-          className="md:text-[54px] text-[30px] text-center pb-7"
+          className="md:text-[54px] text-[30px] text-center pb-4 sm:pb-7"
         >
           Чому клієнти обирають нас?
         </motion.h2>
@@ -45,12 +45,12 @@ const WhyUs = () => {
               whileInView={"show"}
               viewport={{ once: true, amount: 0.2 }}
               key={i}
-              className="border-b border-black/70 flex py-14"
+              className="border-b border-black/70 flex py-7 sm:py-14"
             >
-              <h3 className="w-[40%] xl:text-[38px] flex items-center text-[16px]">
+              <h3 className="w-[40%] xl:text-[38px] flex items-center text-[12px]">
                 {item.title}
               </h3>
-              <p className="w-[60%] text-[12px] md:text-[20px] text-black/70 text-justify">
+              <p className="w-[60%] text-[10px] md:text-[20px] text-black/70 text-justify">
                 {item.description}
               </p>
             </motion.div>

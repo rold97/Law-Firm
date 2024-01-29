@@ -14,19 +14,19 @@ const Hero = () => {
 
   return (
     <section
-      className="bg-bgHero  bg-no-repeat relative xl:bg-cover h-[95vh] xl:py-0 "
+      className="bg-bgHero  bg-no-repeat relative xl:bg-cover h-[95vh] xl:py-0 w-full"
       id="home"
     >
       {modal ? <Modal /> : ""}
-      <div className="container mx-auto h-full relative">
+      <div className="container mx-auto h-full relative ">
         <div className="flex items-center h-[90%]">
-          <div className="xl:w-[80%] w-full text-center xl:text-left">
+          <div className="xl:w-[80%] w-full text-center xl:text-left pt-20 sm:pt-0">
             <motion.h1
               variants={fadeIn("right", 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.4 }}
-              className=" text-lightGray "
+              className="text-lightGray "
             >
               Змініть сприйняття юриспруденції разом із{" "}
               <span className="text-darkGreen">
@@ -38,7 +38,7 @@ const Hero = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.4 }}
-              className="text-lightGray py-6 text-[18px]"
+              className="text-lightGray py-6 text-[16px] sm:text-[18px]"
             >
               Vorobets & Pylypiuk — системна юридична фірма, яка супроводжує Вас
               у складний період Вашого життя. <br />
@@ -50,7 +50,7 @@ const Hero = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.4 }}
-              className="flex-col xl:flex-row items-center justify-center gap-[50px]"
+              className="flex-col xl:flex-row items-center justify-center gap-[25px] sm:gap-[50px]"
             >
               <Button
                 onClick={setModalIsOpen}

@@ -131,9 +131,9 @@ const Practices = () => {
   ];
 
   return (
-    <section className="bg-darkGreen py-32" id="practices">
+    <section className="bg-darkGreen py-16 sm:py-32" id="practices">
       <div className="container mx-auto">
-        <h2 className="text-[48px] flex justify-center xl:hidden">
+        <h2 className="text-[48px] flex justify-center xl:hidden text-center">
           Наші послуги
         </h2>
         <div className="flex flex-col md:grid md:grid-cols-3 xl:grid-cols-4 items-center justify-around">

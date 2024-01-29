@@ -18,7 +18,7 @@ export default function PracticePage({ searchParams }) {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.4 }}
-            className="absolute z-30 bottom-20 left-20"
+            className="absolute z-30 bottom-20 left-10 md:left-20"
           >
             <Link href="/" className="hover:no-underline">
               <div className="flex gap-1 text-lightGray hover:bg-lightGray/50 rounded-md hover:text-black cursor-pointer transition-all duration-300 w-28 justify-center items-center p-2">
@@ -26,7 +26,7 @@ export default function PracticePage({ searchParams }) {
                 <p className="text-[20px]">Назад </p>
               </div>
             </Link>
-            <h2 className=" text-lightGray pt-5">{searchParams.title}</h2>
+            <h1 className=" text-lightGray pt-5">{searchParams.title}</h1>
           </motion.div>
           <Image
             src="/practice/img.jpg"
@@ -43,9 +43,9 @@ export default function PracticePage({ searchParams }) {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.2 }}
-            className="flex h-[30vh] items-center flex-row gap-20 "
+            className="flex h-[30vh] items-center flex-col md:flex-row gap-20 "
           >
-            <h3 className="text-[30px] border-r border-black pr-14 text-center ">
+            <h3 className="text-[18px] sm:text-[30px] border-none md:border-r md:border-black md:pr-14 text-center ">
               Про практику
             </h3>
             <motion.p>{searchParams.description}</motion.p>
@@ -56,11 +56,11 @@ export default function PracticePage({ searchParams }) {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.2 }}
-              className="text-[30px] pb-20"
+              className="text-[16px] sm:text-[30px] pb-20"
             >
               Надаємо наступні послуги:
             </motion.h3>
-            <div className="grid grid-cols-4 gap-10">
+            <div className="md:grid  md:grid-cols-3 lg:grid-cols-4 gap-10 flex flex-col ">
               {searchParams.services.map((service, i) => {
                 return (
                   <motion.div

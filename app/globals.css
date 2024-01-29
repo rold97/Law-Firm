@@ -7,7 +7,7 @@
     @apply box-border font-montserrat;
   }
   body {
-    @apply bg-gradient-to-br from-lightGray to-gray bg-cover bg-no-repeat;
+    @apply bg-gradient-to-br from-lightGray to-gray bg-cover bg-no-repeat w-full;
   }
   a {
     @apply text-lightGray transition-all duration-300 cursor-pointer no-underline hover:no-underline;
@@ -18,7 +18,7 @@
     @apply font-bold;
   }
   h1 {
-    @apply md:text-[62px] text-[36px] md:leading-[84px] leading-[56px];
+    @apply md:text-[62px] text-[32px] md:leading-[84px] leading-[54px];
   }
   h2 {
     @apply text-[62px] leading-[68px];

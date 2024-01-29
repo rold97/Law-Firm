@@ -13,7 +13,7 @@ const AboutUs = () => {
   const setModalIsOpen = useModalStore((state) => state.setModalIsOpen);
   return (
     <section
-      className="py-32 flex items-center bg-gradient-to-br from-lightGray to-gray"
+      className="py-16 sm:py-32 flex items-center bg-gradient-to-br from-lightGray to-gray"
       id="aboutUs"
     >
       {modal ? <Modal /> : ""}
@@ -38,7 +38,7 @@ const AboutUs = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.4 }}
-            className="md:text-[62px] md:leading-[62px] leading-[52px] text-[42px]"
+            className="md:text-[62px] md:leading-[62px] leading-[46px] text-[36px]"
           >
             Досвідчені юристи,
             <span className="text-darkGreen"> індивідуальний</span> підхід і
