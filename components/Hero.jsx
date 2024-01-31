@@ -19,7 +19,7 @@ const Hero = () => {
     >
       {modal ? <Modal /> : ""}
       <div className="container mx-auto h-full relative ">
-        <div className="flex items-center h-[90%]">
+        <div className="flex items-center md:h-[90%] h-full">
           <div className="xl:w-[80%] w-full text-center xl:text-left pt-28 sm:pt-0">
             <motion.h1
               variants={fadeIn("right", 0.2)}
@@ -64,7 +64,7 @@ const Hero = () => {
                 <Button
                   variant="destructive"
                   size="default"
-                  className="uppercase mt-8 xl:mt-0"
+                  className="hidden md:block uppercase mt-8 xl:mt-0"
                 >
                   Ознайомитись з нашими послугами
                 </Button>
