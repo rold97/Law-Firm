@@ -20,7 +20,7 @@ const Hero = () => {
       {modal ? <Modal /> : ""}
       <div className="container mx-auto h-full relative ">
         <div className="flex items-center h-[90%]">
-          <div className="xl:w-[80%] w-full text-center xl:text-left pt-20 sm:pt-0">
+          <div className="xl:w-[80%] w-full text-center xl:text-left pt-28 sm:pt-0">
             <motion.h1
               variants={fadeIn("right", 0.2)}
               initial="hidden"
@@ -50,7 +50,7 @@ const Hero = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.4 }}
-              className="flex-col xl:flex-row items-center justify-center gap-[25px] sm:gap-[50px]"
+              className="flex-col xl:flex-row items-center justify-center gap-[20px] sm:gap-[50px]"
             >
               <Button
                 onClick={setModalIsOpen}

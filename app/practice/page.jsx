@@ -43,12 +43,14 @@ export default function PracticePage({ searchParams }) {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.2 }}
-            className="flex h-[30vh] items-center flex-col md:flex-row gap-20 "
+            className="flex py-8 xl:py-12 items-center flex-col md:flex-row gap-15 xl:gap-20 relative"
           >
-            <h3 className="text-[18px] sm:text-[30px] border-none md:border-r md:border-black md:pr-14 text-center ">
+            <h3 className="text-[18px] sm:text-[30px] border-none md:border-r md:border-black md:pr-14 text-center pb-7 md:pb-0">
               Про практику
             </h3>
-            <motion.p>{searchParams.description}</motion.p>
+            <motion.p className="text-justify md:text-left">
+              {searchParams.description}
+            </motion.p>
           </motion.div>
           <div>
             <motion.h3
@@ -56,11 +58,11 @@ export default function PracticePage({ searchParams }) {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.2 }}
-              className="text-[16px] sm:text-[30px] pb-20"
+              className="text-[16px] sm:text-[30px] pb-8 md:pb-12 text-center md:text-left"
             >
               Надаємо наступні послуги:
             </motion.h3>
-            <div className="md:grid  md:grid-cols-3 lg:grid-cols-4 gap-10 flex flex-col ">
+            <div className="md:grid  md:grid-cols-2 lg:grid-cols-4 gap-10 flex flex-col ">
               {searchParams.services.map((service, i) => {
                 return (
                   <motion.div

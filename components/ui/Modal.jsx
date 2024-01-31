@@ -15,7 +15,7 @@ const Modal = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.1 }}
-        className="fixed z-40 border border-black shadow-md bg-darkGreen p-3 md:pt-3 pt-24 text-center md:top-[15%] md:left-[25%] md:w-[50%] top-0 left-0 w-full  h-full md:h-auto rounded-md"
+        className="fixed z-40 border border-black shadow-md bg-darkGreen p-3 md:pt-3 pt-10 md:pt-24 text-center md:top-[15%] md:left-[25%] md:w-[50%] top-0 left-0 w-full  h-full md:h-auto rounded-md"
       >
         <IoCloseOutline
           size={40}

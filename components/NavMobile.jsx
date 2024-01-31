@@ -12,6 +12,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { useModalStore } from "@/store";
 
 const links = [
   { icon: <RiHome5Fill />, path: "home", name: "Головна", offset: 0 },
@@ -28,6 +29,12 @@ const links = [
 
 const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const setModalIsOpen = useModalStore((state) => state.setModalIsOpen);
+
+  const openModal = () => {
+    setIsOpen(false);
+    setModalIsOpen();
+  };
 
   return (
     <div className={containerStyles}>
@@ -81,20 +88,15 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
             })}
           </div>
           {/* btn */}
-          <ScrollLink
-            to="reservation"
-            smooth
-            offset={-150}
-            onClick={() => setIsOpen(false)}
+
+          <Button
+            variant="destructive"
+            size="default"
+            className="uppercase text-black/80 text-[12px]"
+            onClick={openModal}
           >
-            <Button
-              variant="destructive"
-              size="default"
-              className="uppercase text-black/80 text-[12px]"
-            >
-              Записатись на консультацію
-            </Button>
-          </ScrollLink>
+            Записатись на консультацію
+          </Button>
         </div>
       </aside>
     </div>
