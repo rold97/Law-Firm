@@ -9,7 +9,7 @@ import { fadeIn } from "@/variants";
 const Modal = () => {
   const setModalIsOpen = useModalStore((state) => state.setModalIsOpen);
   return (
-    <div className="hiddem md:fixed z-50 top-0 left-0 w-full h-full bg-black/50">
+    <div className="hiddem md:fixed z-50 top-0 left-0 w-full h-full bg-black/60">
       <motion.div
         variants={fadeIn("down", 0.1)}
         initial="hidden"

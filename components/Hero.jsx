@@ -50,7 +50,7 @@ const Hero = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.4 }}
-              className="flex-col xl:flex-row items-center justify-center gap-[20px] sm:gap-[50px]"
+              className="flex-col xl:flex-row items-center justify-center gap-[25px] sm:gap-[50px]"
             >
               <Button
                 onClick={setModalIsOpen}
@@ -64,7 +64,7 @@ const Hero = () => {
                 <Button
                   variant="destructive"
                   size="default"
-                  className="hidden md:block uppercase mt-8 xl:mt-0"
+                  className="hidden md:inline-flex uppercase mt-8 xl:mt-0"
                 >
                   Ознайомитись з нашими послугами
                 </Button>

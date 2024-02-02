@@ -171,7 +171,7 @@ const Practices = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.4 }}
-            className="hidden bg-gray w-48 h-52 rounded-md xl:flex flex-col justify-around itmes-center shadow-xl ml-4"
+            className="hidden bg-gray w-48 h-52 rounded-md xl:flex flex-col justify-around itmes-center shadow-xl ml-20"
           >
             <p className="flex text-xl font-semibold items-center justify-center pt-4">
               Наші послуги

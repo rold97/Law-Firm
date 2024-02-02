@@ -8,13 +8,13 @@ import WhyUs from "@/components/WhyUs";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
       <AboutUs />
       <Practices />
       <WhyUs />
       <Footer />
-    </div>
+    </>
   );
 }

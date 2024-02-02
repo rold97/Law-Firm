@@ -71,7 +71,7 @@ export default function PracticePage({ searchParams }) {
                     whileInView={"show"}
                     viewport={{ once: true, amount: 0.2 }}
                     key={i}
-                    className=" rounded-md bg-darkGreen/70 flex flex-col relative items-center justify-center px-3 pt-12 pb-10 shadow-xl"
+                    className=" rounded-md bg-darkGreen/75 flex flex-col relative items-center justify-center px-3 pt-12 pb-10 shadow-xl"
                   >
                     <div className="rounded-md bg-lightGray flex p-5 h-2 w-2 items-center justify-center absolute top-3 right-3 shadow-md">
                       <p className="font-bold">{i}</p>
