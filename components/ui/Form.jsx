@@ -1,11 +1,13 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
+import { useModalStore } from "@/store";
 
 const Form = () => {
   const notifySuccess = () => toast.success("Надіслано!");
   const notifyError = () => toast.error("Упс! Щось пішло не так...");
   const form = useRef();
+  const setModalIsOpen = useModalStore((state) => state.setModalIsOpen);
 
   const sendEmailHandler = (e) => {
     e.preventDefault();
@@ -22,6 +24,7 @@ const Form = () => {
           console.log(result.text);
           notifySuccess();
           form.current.reset();
+          setModalIsOpen();
         },
         (error) => {
           console.log(error.text);

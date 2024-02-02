@@ -20,7 +20,7 @@ const Hero = () => {
       {modal ? <Modal /> : ""}
       <div className="container mx-auto h-full relative ">
         <div className="flex items-center md:h-[90%] h-full">
-          <div className="xl:w-[80%] w-full text-center xl:text-left pt-28 sm:pt-0">
+          <div className="xl:w-[80%] w-full text-center xl:text-left pt-16 sm:pt-0">
             <motion.h1
               variants={fadeIn("right", 0.2)}
               initial="hidden"
