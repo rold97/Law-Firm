@@ -37,7 +37,7 @@ const Form = () => {
   return (
     <form
       ref={form}
-      className="flex flex-col border-none w-full h-full border-md gap-10 px-10"
+      className="flex flex-col border-none w-full h-full border-md gap-4 md:gap-10 px-10"
       onSubmit={sendEmailHandler}
     >
       <div className="flex flex-col">
