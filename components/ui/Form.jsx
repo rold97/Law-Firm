@@ -7,7 +7,6 @@ const Form = () => {
   const notifySuccess = () => toast.success("Надіслано!");
   const notifyError = () => toast.error("Упс! Щось пішло не так...");
   const form = useRef();
-  const setModalIsOpen = useModalStore((state) => state.setModalIsOpen);
 
   const sendEmailHandler = (e) => {
     e.preventDefault();
@@ -24,7 +23,6 @@ const Form = () => {
           console.log(result.text);
           notifySuccess();
           form.current.reset();
-          setModalIsOpen();
         },
         (error) => {
           console.log(error.text);
